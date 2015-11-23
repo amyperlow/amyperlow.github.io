@@ -4,8 +4,6 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
     'main': [
-      'webpack/hot/dev-server',
-      'webpack-dev-server/client?http://localhost:8080',
       './scripts/main.js'
     ],
     'base-style': './style/base.less',
