@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700|Source+Serif+Pro:400,600,700);
+
+// Variables
+
+@primary: #7324b6;
+
+@mobile-top-padding: 14px;
+
+body, html {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+  font-size: 80%;
+}
+
+@media (min-width: 400px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+
+div {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  padding: 0px 0px 0px 24px;
+}
+
+.primary {
+  color: @primary;
+}
+
+.feature {
+  font-weight: 700;
+}
+
+h2 {
+  text-decoration: underline;
+  font-weight: 300;
+  color: @primary;
+  font-size: 1.7em;
+  margin: 0px 0px 20px 0px;
+  padding: 0px;
+}
+
+.portrait-image {
+  border: 1px solid @primary;
+  margin: 0px 0px 10px 0px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.body-container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+nav {
+  padding-top: @mobile-top-padding;
+  
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 4px;
+    margin-right: 1%;
+    color: #979797;
+
+    &:hover {
+      background-color: @primary;
+      color: #fff;
+    }
+        
+  }
+}
+
+.title {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 4.5em;
+  line-height: 1.1em;
+  font-weight: 600;
+  padding: 0px;
+  margin: 50px 0px 8px 0px;
+  color: #626262;
+
+  .primary { display: block; }
+}
+
+.tag-line {
+  font-weight: 300;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: #666565;
+}
+
+.intro {
+  padding: 0px;
+}
+
+.section {
+  padding-top: @mobile-top-padding;
+  overflow: auto;
+}
+
+h3 {
+  margin: 0px;
+  font-size: 1em;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "WebpackDemo",
+  "author": "Web Design Weekly",
+  "version": "0.0.1",
+  "description": "The start of good things!",
+  "private": true,
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "watch": "node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "dependencies": {
+    "extract-text-webpack-plugin": "^0.9.1"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.1.0",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
