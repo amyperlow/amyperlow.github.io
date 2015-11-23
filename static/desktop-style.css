@@ -1,3 +1,35 @@
 html {
-  font-size: 150%;
+  font-size: 110%;
+}
+.portrait-image {
+  float: right;
+  width: 50%;
+  margin-left: 2%;
+}
+nav a {
+  padding: 8px;
+}
+.title {
+  font-size: 6em;
+  margin-top: 80px;
+  margin-bottom: 15px;
+}
+.title .primary {
+  display: inline;
+}
+.tag-line {
+  font-size: 1.5em;
+  margin-bottom: 35px;
+  width: 70%;
+}
+.intro {
+  width: 80%;
+}
+.services-left {
+  float: left;
+  width: 48%;
+}
+.services-right {
+  float: right;
+  width: 48%;
 }
