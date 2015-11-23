@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js",
+    "prod": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p",
     "watch": "node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "dependencies": {

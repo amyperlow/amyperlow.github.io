@@ -1,11 +1,20 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var debug = process.env.NODE_ENV !== 'production';
+
+var liveReload = [
+  'webpack/hot/dev-server',
+  'webpack-dev-server/client?http://localhost:8080'
+];
+var mainEntry = ['./scripts/main.js'];
+
+if (debug) {
+  mainEntry = liveReload.concat(mainEntry);
+}
 
 module.exports = {
   entry: {
-    'main': [
-      './scripts/main.js'
-    ],
+    'main': mainEntry,
     'base-style': './style/base.less',
     'desktop-style': './style/desktop.less'
   },
