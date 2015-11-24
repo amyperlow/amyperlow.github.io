@@ -17,7 +17,8 @@ module.exports = {
   entry: {
     'main': mainEntry,
     'base-style': './style/base.less',
-    'desktop-style': './style/desktop.less'
+    'desktop-style': './style/desktop.less',
+    'html': './index.html'
   },
   output: {
     filename: '[name].js',
@@ -42,6 +43,10 @@ module.exports = {
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+      },
+      {
+        test: /\.html$/,
+        loader: "file?name=[name].[ext]",
       }
     ]
   }
