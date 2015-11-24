@@ -2,16 +2,22 @@
 
 // Variables
 
-@primary: #7324b6;
+@primary: #93b0dc;
+@secondary: #fbf9f1;
+@accent: #424347;
 
 @mobile-top-padding: 14px;
 
 body, html {
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: @secondary;
+  padding: 0px;
+  margin: 0px;
 }
 
 html {
   font-size: 80%;
+  color: @accent;
 }
 
 @media (min-width: 400px) {
@@ -47,7 +53,7 @@ ul, ol {
 h2 {
   text-decoration: underline;
   font-weight: 300;
-  color: @primary;
+  color: @accent;
   font-size: 1.7em;
   margin: 0px 0px 20px 0px;
   padding: 0px;
@@ -58,14 +64,6 @@ h2 {
   margin: 0px 0px 10px 0px;
   max-width: 100%;
   height: auto;
-}
-
-
-.body-container {
-  width: 95%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0px;
 }
 
 nav {
@@ -109,12 +107,32 @@ nav {
   padding: 0px;
 }
 
-.section {
-  padding-top: @mobile-top-padding;
-  overflow: auto;
+.section-container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0px;
+
+   .content-container {
+    width: 100%;
+    max-width: 700px;
+  }
 }
 
 h3 {
   margin: 0px;
   font-size: 1em;
+}
+
+#intro {
+  padding-top: 0px;
+}
+
+.dark-wrapper {
+  background-color: @accent;
+  color: @secondary;
+  
+  h2 {
+    color: @primary;
+  }
 }
