@@ -18,7 +18,7 @@ const hideText = 'Hide <<';
 
 $('.project-list').hide();
 $('.read-more').click((e) => {
-  var t = $(e.target);
+  const t = $(e.target);
   if (t.text() === showText) {
     t.text(hideText);
   } else {
@@ -27,24 +27,23 @@ $('.read-more').click((e) => {
   t.prev().toggle('slow');
 });
 
-let userScrolled;
 const topButton = $('.top-button');
 
 topButton.hide();
 
 function showTopButton() {
   if ($(window).scrollTop() > 600) {
-    topButton.fadeIn("slow");
+    topButton.fadeIn('slow');
   } else {
-    topButton.fadeOut("fast");
+    topButton.fadeOut('fast');
   }
 }
 
 let scrollDebounce;
 
-$(window).scroll(() => { 
-    clearTimeout(scrollDebounce);
-    scrollDebounce = setTimeout(() => {
-      showTopButton();
-    }, 500);
+$(window).scroll(() => {
+  clearTimeout(scrollDebounce);
+  scrollDebounce = setTimeout(() => {
+    showTopButton();
+  }, 500);
 });
