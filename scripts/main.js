@@ -34,21 +34,17 @@ topButton.hide();
 
 function showTopButton() {
   if ($(window).scrollTop() > 600) {
-    topButton.show();
+    topButton.fadeIn("slow");
   } else {
-    topButton.hide();
+    topButton.fadeOut("fast");
   }
 }
 
+let scrollDebounce;
+
 $(window).scroll(() => { 
-    userScrolled = true;
+    clearTimeout(scrollDebounce);
+    scrollDebounce = setTimeout(() => {
+      showTopButton();
+    }, 500);
 });
-
-setInterval(() => {
-  if (userScrolled) { 
-    userScrolled = false;
-    showTopButton();
-  }
-}, 500);
-
-
