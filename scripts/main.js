@@ -26,3 +26,29 @@ $('.read-more').click((e) => {
   }
   t.prev().toggle('slow');
 });
+
+let userScrolled;
+const topButton = $('.top-button');
+
+topButton.hide();
+
+function showTopButton() {
+  if ($(window).scrollTop() > 600) {
+    topButton.show();
+  } else {
+    topButton.hide();
+  }
+}
+
+$(window).scroll(() => { 
+    userScrolled = true;
+});
+
+setInterval(() => {
+  if (userScrolled) { 
+    userScrolled = false;
+    showTopButton();
+  }
+}, 500);
+
+
