@@ -48,10 +48,7 @@ module.exports = {
         test: /\.html$/,
         loader: "file?name=[name].[ext]",
       },
-      {
-        test: /\.png$/,
-        loader: "file-loader"
-      }
+      { test: /\.png$/, loader: "url-loader?mimetype=image/png" }
     ]
   }
 };
