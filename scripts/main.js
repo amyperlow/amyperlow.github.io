@@ -12,3 +12,17 @@ $('a[href*=#]').click((e) => {
     }
   }
 });
+
+const showText = 'Read More >>';
+const hideText = 'Hide <<';
+
+$('.project-list').hide();
+$('.read-more').click((e) => {
+  var t = $(e.target);
+  if (t.text() === showText) {
+    t.text(hideText);
+  } else {
+    t.text(showText);
+  }
+  t.prev().toggle('slow');
+});

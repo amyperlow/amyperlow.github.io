@@ -5,8 +5,16 @@
 @primary: #93b0dc;
 @secondary: #fbf9f1;
 @accent: #424347;
-
 @mobile-top-padding: 14px;
+
+// Mixins
+.boxSizing(@type: border-box) {
+  -webkit-box-sizing: @type;
+     -moz-box-sizing: @type;
+    -ms-box-sizing: @type;
+       -o-box-sizing: @type; 
+      box-sizing: @type; 
+}
 
 body, html {
   font-family: 'Source Sans Pro', sans-serif;
@@ -117,7 +125,7 @@ nav {
 }
 
 .section-container {
-  width: 95%;
+  width: 90%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px 0px;
@@ -148,11 +156,23 @@ h3 {
 
 .project {
   padding: 20px 0px;
-  width: 95%;
+  width: 100%;
   border-bottom: 3px solid #616366;
+  .boxSizing;
 
   img { 
-    display: none;
-    border: 1px solid @secondary; 
+    //display: none;
+    width: 100%;
+    height: auto;
+    border: 3px solid #616366;
+    .boxSizing; 
+  }
+
+  .project-text {
+    padding-top: 20px;
+
+    li {
+      font-size: 0.85em;
+    }
   }
 }

@@ -57,20 +57,32 @@ nav {
   }
 }
 
-.project {
-  width: 100%;
+#projects {
   overflow: auto;
+}
+
+.project:nth-of-type(1) {
+  margin-left: 0px;
+}
+
+.project {
+  width: 30%;
+  float: left;
+  margin-left: 5%;
+  //overflow: auto;
 
   img {
-    float: right;
+/*     float: right;
     width: 18%;
     margin: 50px 5%;
-    margin-top: 50px;
-    //display: block;
+    margin-top: 50px; */
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .project-text {
-    float: left;
-    width: 65%;
+/*     float: left;
+    width: 65%; */
   }
 }
